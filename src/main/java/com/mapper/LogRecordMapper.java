@@ -24,8 +24,6 @@ public interface LogRecordMapper {
 
     Integer getTotal();
 
-    //List<LogRecord> listByTime(Date startTime, Date endTime);
-
     List<LogRecord> listByTime(String startTime, String endTime);
 
     List<ClientAnalysisVO> countListByRemoteAddr(@Param("requestUrl") String requestUrl, @Param("status") int status, int start, int paseSize);

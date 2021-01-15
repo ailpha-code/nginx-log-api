@@ -52,7 +52,6 @@ public class LogFileInit {
                     if(m.find()){
                         LogRecord log = new LogRecord();
                         log.setRemoteAddr(m.group(1));
-                        //log.setUser(m.group(2));
                         log.setRecordTime(sdf.parse(m.group(2)));
                         String str = m.group(3);
                         String method = null, target = null, protocol = null;
