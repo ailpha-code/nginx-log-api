@@ -102,9 +102,6 @@ public class LogFileInit {
                         }
                     }
                 }
-                for (LogRecord logRecord : list) {
-                    System.out.println(logRecord);
-                }
             } catch (Exception e) {
                 e.printStackTrace();
             } finally{
