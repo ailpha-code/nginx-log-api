@@ -13,7 +13,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
 import javax.annotation.Resource;
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -68,6 +67,8 @@ public class LogRecordServiceImpl implements ILogRecordService {
         int start = (pageNum-1)*paseSize;
         return logRecordMapper.countListByStatus(start,paseSize);
     }
+
+
 
     @Override
     public ResponseEntity<byte[]> export(String startTime, String endTime) {

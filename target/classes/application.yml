@@ -7,6 +7,7 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/nginx?serverTimezone=UTC&rewriteBatchedStatements=true
     username: root
     password:
+    #driver-class-name: com.mysql.jdbc.Driver
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 logging:
@@ -19,6 +20,6 @@ logging:
   level:
     root: info
 
-monitorDir: d:/workspace/idea_space/log
+monitorDir: d:/tmp
 #目录监听刷新的间隔时间，单位毫秒
 monitorDirInterval: 5000

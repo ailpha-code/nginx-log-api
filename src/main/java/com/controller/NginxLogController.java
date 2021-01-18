@@ -5,7 +5,9 @@ import com.model.APIAnalysisVO;
 import com.model.ClientAnalysisVO;
 import com.model.ErrorAnalysisVO;
 import com.service.ILogRecordService;
+import com.service.impl.LogRecordBatchServiceImpl;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,9 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 @RestController

@@ -1,10 +1,6 @@
 package com.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
-
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class LogRecord {
@@ -20,6 +16,7 @@ public class LogRecord {
     private Integer costTime;
     private String hostUrl;
     private String clientType;
+    private String param;
 
     public Long getId() {
         return id;
@@ -82,13 +79,16 @@ public class LogRecord {
     public void setClientType(String clientType) {
         this.clientType = clientType;
     }
+    public String getParam() { return param; }
+    public void setParam(String param) { this.param = param; }
     @Override
     public String toString() {
         return "LogRecord [id=" + id + ", remoteAddr=" + remoteAddr
                 + ", recordTime=" + recordTime + ", requestType=" + requestType
                 + ", requestUrl=" + requestUrl + ", protocol=" + protocol
                 + ", status=" + status + ", costTime=" + costTime
-                + ", hostUrl=" + hostUrl + ", clientType=" + clientType + "]";
+                + ", hostUrl=" + hostUrl + ", clientType=" + clientType
+                + ", param=" + param + "]";
     }
 
 }
